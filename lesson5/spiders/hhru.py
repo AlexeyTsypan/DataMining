@@ -52,6 +52,6 @@ class HhruSpider(scrapy.Spider):
                     salary_desc=s
 
         href = response.url
-        source = self.allowed_domains
+        source = self.allowed_domains[0]
 
         yield JobparserItem(name=name, salary_min=salary_min,salary_max=salary_max,salary_cur=salary_cur,salary_desc=salary_desc, href=href,source=source)
